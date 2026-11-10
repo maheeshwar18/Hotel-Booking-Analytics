@@ -53,6 +53,20 @@ Created a multi-page Hotel Booking Analytics Dashboard using Databricks Genie an
 4. Hotel & Customer Insights
 5. Data Quality
 
+## Dashboard Preview
+
+### Executive Overview
+![Executive Overview](dashboard_executive_overview.png)
+
+### Booking Analysis
+![Booking Analysis](dashboard_booking_analysis.png)
+
+### Revenue Analysis
+![Revenue Analysis](dashboard_revenue_analysis.png)
+
+### Data Pipeline
+![Data Pipeline](pipeline.png)
+
 ## Key Learnings
 - Understanding the Medallion Architecture.
 - Building Bronze, Silver, and Gold data pipelines.
