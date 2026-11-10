@@ -65,10 +65,10 @@ Created a multi-page Hotel Booking Analytics Dashboard using Databricks Genie an
 ![Revenue Analysis](Dashboard_screenshots/revenue_analysis.png)
 
 ### Hotel and Customer Insights
-![Hotel and Customer Insights](Dashboard_screenshots/Hotel_and_customers_insights.png.)
+![Hotel and Customer Insights](Dashboard_screenshots/Hotel_and_customers_insights.png)
 
 ### Data Quality
-![Data Quality](Dashboard_screenshots/Data_quality.png.)
+![Data Quality](Dashboard_screenshots/Data_quality.png)
 
 ### Data Pipeline
 ![Data Pipeline](Dashboard_screenshots/pipeline.png)
