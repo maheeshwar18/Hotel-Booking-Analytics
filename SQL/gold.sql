@@ -259,25 +259,25 @@ CROSS JOIN rejected_checks x;
 
 -- Q6: Monthly bookings
 SELECT *
-FROM hospitality_catalog.bookings.gold_monthly_bookings
+FROM hospitality_catalog.default.gold_monthly_bookings
 ORDER BY stay_month;
 
 
 -- Q7: Hotel performance
 SELECT *
-FROM hospitality_catalog.bookings.gold_hotel_summary
+FROM hospitality_catalog.default.gold_hotel_summary
 ORDER BY net_revenue DESC;
 
 
 -- Q8: Room type performance
 SELECT *
-FROM hospitality_catalog.bookings.gold_room_type_summary
+FROM hospitality_catalog.default.gold_room_type_summary
 ORDER BY net_revenue DESC;
 
 
 -- Q9: Booking channel performance
 SELECT *
-FROM hospitality_catalog.bookings.gold_channel_summary
+FROM hospitality_catalog.default.gold_channel_summary
 ORDER BY cancellation_rate_pct DESC;
 
 
