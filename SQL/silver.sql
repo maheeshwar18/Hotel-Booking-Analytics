@@ -153,12 +153,12 @@ WHERE
 
 -- Q5: Count clean bookings
 SELECT COUNT(*) AS clean_rows
-FROM hospitality_catalog.bookings.silver_bookings_clean;
+FROM hospitality_catalog.default.silver_bookings_clean;
 
 
 -- Q6: Count rejected bookings
 SELECT COUNT(*) AS rejected_rows
-FROM hospitality_catalog.bookings.silver_bookings_rejected;
+FROM hospitality_catalog.default.silver_bookings_rejected;
 
 
 -- Q7: Check duplicates removed
@@ -166,11 +166,35 @@ SELECT
     COUNT(*) AS bronze_rows,
     COUNT(DISTINCT booking_id) AS unique_bookings,
     COUNT(*) - COUNT(DISTINCT booking_id) AS duplicate_rows
-FROM hospitality_catalog.bookings.bronze_hotel_bookings;
+FROM hospitality_catalog.default.bronze_hotel_bookings;
 
 
 -- Q8: Check cancelled bookings
 SELECT booking_status, COUNT(*) AS total_bookings
-FROM hospitality_catalog.bookings.silver_bookings_clean
+FROM hospitality_catalog.default.silver_bookings_clean
 GROUP BY booking_status;
+
+
+-- Q9: Silver layer validation
+
+SELECT
+    (SELECT COUNT(*)
+     FROM hospitality_catalog.default.bronze_hotel_bookings)
+        AS bronze_rows,
+
+    (SELECT COUNT(*)
+     FROM hospitality_catalog.default.silver_bookings_clean)
+        AS clean_rows,
+
+    (SELECT COUNT(*)
+     FROM hospitality_catalog.default.silver_bookings_rejected)
+        AS rejected_rows,
+
+    (SELECT COUNT(*)
+     FROM hospitality_catalog.default.bronze_hotel_bookings)
+    -
+    (SELECT COUNT(DISTINCT booking_id)
+     FROM hospitality_catalog.default.bronze_hotel_bookings)
+        AS duplicate_rows;
+
 
