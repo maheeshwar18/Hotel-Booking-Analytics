@@ -56,13 +56,19 @@ Created a multi-page Hotel Booking Analytics Dashboard using Databricks Genie an
 ## Dashboard Preview
 
 ### Executive Overview
-![Executive Overview](dashboard_executive_overview.png)
+![Executive Overview](executive_overview.png)
 
 ### Booking Analysis
-![Booking Analysis](dashboard_booking_analysis.png)
+![Booking Analysis](booking_analysis.png)
 
 ### Revenue Analysis
-![Revenue Analysis](dashboard_revenue_analysis.png)
+![Revenue Analysis](revenue_analysis.png)
+
+### Hotel and Customer Insights
+![Hotel and Customer Insights](Hotel_and_customer_insights.png)
+
+### Data Quality
+![Data Quality](data_quality.png)
 
 ### Data Pipeline
 ![Data Pipeline](pipeline.png)
